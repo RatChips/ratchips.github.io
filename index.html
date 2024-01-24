@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.js"></script>
+</head>
+
+<body>
+    <div id="qrcode"></div>
+    <script type="text/javascript">
+        ts = Date.now();
+        text = `$50a1cc8ba7a441d6998d9af5723e29fc#${ts}*`;
+        console.trace(text);
+        new QRCode(document.getElementById("qrcode"), { text, correctLevel: QRCode.CorrectLevel.M });
+    </script>
+</body>
+
+</html>
